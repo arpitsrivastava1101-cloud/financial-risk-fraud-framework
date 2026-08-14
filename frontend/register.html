@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Fraud Shield</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="auth-body register-page">
+
+
+    <!-- Theme Toggle -->
+
+    <div class="theme-toggle auth-theme-toggle">
+
+        <button
+            id="lightModeBtn"
+            class="theme-btn"
+            title="Light Mode"
+            onclick="setLightMode()">
+
+            ☀
+
+        </button>
+
+
+        <button
+            id="darkModeBtn"
+            class="theme-btn"
+            title="Dark Mode"
+            onclick="setDarkMode()">
+
+            ☾
+
+        </button>
+
+    </div>
+
+
+
+    <div class="auth-container">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="auth-left">
+
+            <div class="auth-logo">
+
+                🛡️ Fraud Shield
+
+            </div>
+
+
+            <h1>
+                Protect Your Transactions.
+            </h1>
+
+
+            <p>
+
+                Create your account and start monitoring
+                suspicious transactions with Fraud Shield.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- REGISTER FORM -->
+
+        <div class="auth-card">
+
+            <h2>
+                Create Account
+            </h2>
+
+
+            <p class="auth-subtitle">
+                Register a new account
+            </p>
+
+
+            <form id="registerForm">
+
+
+                <div class="form-group">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required>
+
+                </div>
+
+
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        required>
+
+                    I agree to the Terms & Conditions
+
+                </label>
+
+
+
+                <button
+                    type="submit"
+                    class="auth-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+
+
+            <p class="switch-auth">
+
+                Already have an account?
+
+                <a
+                    href="login.html"
+                    onclick="event.preventDefault(); slideToPage('login.html', 'login');">
+
+                    Login
+
+                </a>
+
+            </p>
+
+
+
+            <a
+                href="index.html"
+                class="back-home">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

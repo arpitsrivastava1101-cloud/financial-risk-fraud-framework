@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fraud Shield</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🛡️ Fraud Shield
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#features">Features</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-actions">
+
+                <!-- Theme Buttons -->
+
+                <div class="theme-toggle">
+
+                    <button
+                        id="lightModeBtn"
+                        class="theme-btn"
+                        title="Light Mode"
+                        onclick="setLightMode()">
+
+                        ☀
+
+                    </button>
+
+
+                    <button
+                        id="darkModeBtn"
+                        class="theme-btn"
+                        title="Dark Mode"
+                        onclick="setDarkMode()">
+
+                        ☾
+
+                    </button>
+
+                </div>
+
+
+                <!-- Login -->
+
+                <button
+                    class="login-btn"
+                    onclick="window.location.href='login.html'">
+
+                    Login
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Detect Fraud.
+                <br>
+
+                <span>Protect Future.</span>
+
+            </h1>
+
+
+            <p>
+
+                Fraud Shield uses intelligent technology
+                to identify suspicious activities and
+                help prevent fraud in real-time.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='register.html'">
+
+                    Get Started
+
+                </button>
+
+
+                <button
+                    class="secondary-btn"
+                    onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= DASHBOARD PREVIEW ================= -->
+
+        <div class="dashboard">
+
+            <div class="dashboard-header">
+
+                <h2>
+                    Fraud Shield Dashboard
+                </h2>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h4>
+                        Total Transactions
+                    </h4>
+
+                    <h2>
+                        12,842
+                    </h2>
+
+                    <p>
+                        ↗ Transactions
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h4>
+                        Fraud Detected
+                    </h4>
+
+                    <h2>
+                        215
+                    </h2>
+
+                    <p>
+                        ⚠ Suspicious
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h4>
+                        Risk Score
+                    </h4>
+
+                    <h2>
+                        73%
+                    </h2>
+
+                    <p>
+                        Medium Risk
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="transactions">
+
+                <h3>
+                    Recent Transactions
+                </h3>
+
+
+                <div class="transaction">
+
+                    <span>
+                        TXN1001
+                    </span>
+
+                    <span>
+                        ₹12,500
+                    </span>
+
+                    <span class="safe">
+                        Completed
+                    </span>
+
+                    <span>
+                        Low
+                    </span>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <span>
+                        TXN1002
+                    </span>
+
+                    <span>
+                        ₹45,000
+                    </span>
+
+                    <span class="danger">
+                        Flagged
+                    </span>
+
+                    <span>
+                        High
+                    </span>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <span>
+                        TXN1003
+                    </span>
+
+                    <span>
+                        ₹8,900
+                    </span>
+
+                    <span class="safe">
+                        Completed
+                    </span>
+
+                    <span>
+                        Low
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <h2>
+            FEATURES
+        </h2>
+
+
+        <div class="feature-container">
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Real-time Detection
+                </h3>
+
+                <p>
+                    Detect suspicious activities in real-time
+                    before fraud happens.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🧠
+                </div>
+
+                <h3>
+                    AI Powered
+                </h3>
+
+                <p>
+                    Intelligent models analyze patterns
+                    and improve fraud detection.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    📊
+                </div>
+
+                <h3>
+                    Risk Analysis
+                </h3>
+
+                <p>
+                    Analyze transactions and identify
+                    high-risk activities.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Secure & Reliable
+                </h3>
+
+                <p>
+                    Keep your transaction data protected
+                    with a secure system.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2>
+            About Fraud Shield
+        </h2>
+
+        <p>
+
+            Fraud Shield is a fraud detection system
+            designed to identify suspicious transactions,
+            analyze risk, and help prevent financial fraud.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-heading">
+
+                <h2>Get In Touch</h2>
+
+                <p>
+                    Have a question about Fraud Shield?
+                    Send us a message and we'll get back to you.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <!-- Name + Email -->
+
+                <div class="contact-row">
+
+                    <div class="contact-field">
+
+                        <label for="contactName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="John Doe"
+                            required>
+
+                    </div>
+
+
+                    <div class="contact-field">
+
+                        <label for="contactEmail">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="john@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Message -->
+
+                <div class="contact-field">
+
+                    <label for="contactMessage">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="contactMessage"
+                        placeholder="Tell us about your problem..."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- Send Button -->
+
+                <button
+                    type="submit"
+                    class="send-message-btn">
+
+                    <span class="send-icon">➤</span>
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+
+                <h3>🛡️ Fraud Shield</h3>
+
+                <p>
+                    A simple and intelligent system designed
+                    to detect suspicious transactions
+                    and prevent online fraud.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Fraud Shield. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

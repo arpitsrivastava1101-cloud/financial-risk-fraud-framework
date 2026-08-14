@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Fraud Shield</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🛡️ Fraud Shield
+            </div>
+
+
+            <div class="dashboard-user">
+
+                <span id="customerName">
+                    Welcome, Customer
+                </span>
+
+
+                <!-- Theme -->
+
+                <div class="theme-toggle">
+
+                    <button
+                        id="lightModeBtn"
+                        class="theme-btn"
+                        title="Light Mode"
+                        onclick="setLightMode()">
+
+                        ☀
+
+                    </button>
+
+
+                    <button
+                        id="darkModeBtn"
+                        class="theme-btn"
+                        title="Dark Mode"
+                        onclick="setDarkMode()">
+
+                        ☾
+
+                    </button>
+
+                </div>
+
+
+                <!-- Logout -->
+
+                <button
+                    class="logout-btn"
+                    onclick="logoutUser()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard-main">
+
+
+        <div class="dashboard-title">
+
+            <h1>
+                Fraud Shield Dashboard
+            </h1>
+
+            <p>
+                Monitor transactions and detect
+                suspicious activities.
+            </p>
+
+        </div>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="dashboard-stats">
+
+
+            <div class="dashboard-stat">
+
+                <div class="stat-icon">
+                    💳
+                </div>
+
+                <div>
+
+                    <p>
+                        Total Transactions
+                    </p>
+
+                    <h2>
+                        12,842
+                    </h2>
+
+                    <span class="stat-positive">
+                        ↑ 8.2% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-stat">
+
+                <div class="stat-icon">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <p>
+                        Fraud Detected
+                    </p>
+
+                    <h2>
+                        215
+                    </h2>
+
+                    <span class="stat-negative">
+                        ↑ 2.4% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-stat">
+
+                <div class="stat-icon">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <p>
+                        Transactions Protected
+                    </p>
+
+                    <h2>
+                        98.3%
+                    </h2>
+
+                    <span class="stat-positive">
+                        System accuracy
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-stat">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <p>
+                        Amount Protected
+                    </p>
+
+                    <h2>
+                        ₹8.4L
+                    </h2>
+
+                    <span class="stat-positive">
+                        Fraud prevented
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MAIN DASHBOARD -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- FRAUD CHECK -->
+
+            <div class="dashboard-card fraud-check">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Check Transaction
+                        </h2>
+
+                        <p>
+                            Enter transaction details
+                            to check fraud risk.
+                        </p>
+
+                    </div>
+
+                    <span class="card-icon">
+                        🔍
+                    </span>
+
+                </div>
+
+
+                <form id="fraudCheckForm">
+
+
+                    <div class="input-row">
+
+                        <div class="dashboard-input">
+
+                            <label>
+                                Transaction Amount
+                            </label>
+
+                            <input
+                                type="number"
+                                id="amount"
+                                placeholder="₹ Enter amount"
+                                required>
+
+                        </div>
+
+
+                        <div class="dashboard-input">
+
+                            <label>
+                                Transaction Type
+                            </label>
+
+                            <select id="transactionType">
+
+                                <option value="">
+                                    Select type
+                                </option>
+
+                                <option value="online">
+                                    Online Payment
+                                </option>
+
+                                <option value="card">
+                                    Card Payment
+                                </option>
+
+                                <option value="bank">
+                                    Bank Transfer
+                                </option>
+
+                                <option value="upi">
+                                    UPI
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="input-row">
+
+                        <div class="dashboard-input">
+
+                            <label>
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="Transaction location"
+                                required>
+
+                        </div>
+
+
+                        <div class="dashboard-input">
+
+                            <label>
+                                Transaction ID
+                            </label>
+
+                            <input
+                                type="text"
+                                id="transactionId"
+                                placeholder="TXN0000"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="check-fraud-btn">
+
+                        Check for Fraud
+
+                    </button>
+
+
+                </form>
+
+
+                <div
+                    id="fraudResult"
+                    class="fraud-result">
+                </div>
+
+            </div>
+
+
+
+            <!-- RISK OVERVIEW -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Risk Overview
+                        </h2>
+
+                        <p>
+                            Current system risk levels
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <div>
+
+                        <span>
+                            Low Risk
+                        </span>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-low"
+                            style="width:72%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <div>
+
+                        <span>
+                            Medium Risk
+                        </span>
+
+                        <strong>
+                            20%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-medium"
+                            style="width:20%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-item">
+
+                    <div>
+
+                        <span>
+                            High Risk
+                        </span>
+
+                        <strong>
+                            8%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-high"
+                            style="width:8%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-message">
+
+                    <strong>
+                        🛡️ System Status: Secure
+                    </strong>
+
+                    <p>
+                        Fraud Shield is actively monitoring
+                        suspicious transactions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RECENT TRANSACTIONS -->
+
+        <section class="dashboard-card transactions-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Recent Transactions
+                    </h2>
+
+                    <p>
+                        Latest transactions analyzed
+                        by Fraud Shield.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Transaction ID
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Type
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Risk
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                TXN1001
+                            </td>
+
+                            <td>
+                                ₹12,500
+                            </td>
+
+                            <td>
+                                UPI
+                            </td>
+
+                            <td>
+                                14 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="risk-low">
+                                    Low
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-safe">
+                                    Safe
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                TXN1002
+                            </td>
+
+                            <td>
+                                ₹45,000
+                            </td>
+
+                            <td>
+                                Card
+                            </td>
+
+                            <td>
+                                14 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="risk-high">
+                                    High
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-danger">
+                                    Flagged
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                TXN1003
+                            </td>
+
+                            <td>
+                                ₹8,900
+                            </td>
+
+                            <td>
+                                Online
+                            </td>
+
+                            <td>
+                                13 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="risk-low">
+                                    Low
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-safe">
+                                    Safe
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                TXN1004
+                            </td>
+
+                            <td>
+                                ₹75,000
+                            </td>
+
+                            <td>
+                                Bank Transfer
+                            </td>
+
+                            <td>
+                                13 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="risk-medium">
+                                    Medium
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="status-review">
+                                    Review
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Fraud Shield. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
